@@ -124,7 +124,7 @@ class MainViewController: UIViewController {
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(xLayoutList, toSection: .x)
         snapshot.appendItems(yLayoutList, toSection: .y)
-        dataSource.apply(snapshot,animatingDifferences: true)
+        dataSource.apply(snapshot,animatingDifferences: dataSource.snapshot().numberOfSections > 0)
     }
     
     
